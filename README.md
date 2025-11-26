@@ -46,7 +46,49 @@ If any Error, correct it in code and execute again
 Verify the generated waveform using Tabulation and Model Waveform 
 
 __PROGRAM:__
+```
+clc;
+clear all;
+close;
 
+t = 0:0.01:%pi*2;
+x = sin(2*t);
+
+// Plot original signal
+subplot(3,2,1);
+plot(t, x);
+title('Original Signal');
+
+// Autocorrelation
+au = xcorr(x, x);
+subplot(3,2,2);
+plot(au);
+title('Autocorrelation');
+
+// FFT of autocorrelation
+v = fft(au);
+subplot(3,2,3);
+plot(abs(v));
+title('FFT of Autocorrelation');
+
+// FFT of original signal
+fw = fft(x);
+subplot(3,2,4);
+plot(abs(fw));
+title('FFT of Original Signal');
+
+// Power spectrum
+fw2 = (abs(fw)).^2;
+subplot(3,2,5);
+plot(fw2);
+title('Power Spectrum');
+
+```
 __OUTPUT:__
 
+<img width="1912" height="916" alt="AC 6th EXP Output" src="https://github.com/user-attachments/assets/80312434-6680-444a-b301-795cfda8fdf7" />
+
+
 __RESULT:__
+
+Thus the Autocorrelation using the SCILAB software is verified and proved successfully
