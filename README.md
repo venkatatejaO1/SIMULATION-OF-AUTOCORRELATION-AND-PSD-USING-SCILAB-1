@@ -91,4 +91,5 @@ __OUTPUT:__
 
 __RESULT:__
 
-Thus the Autocorrelation using the SCILAB software is verified and proved successfully
+![image](https://github.com/user-attachments/assets/618db582-bad8-4a08-9409-598216119511)
+
